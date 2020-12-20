@@ -1,0 +1,20 @@
+<div class="centered-content">
+    <div class="modal-box">
+        <h1 class="title">
+            Add a new player
+        </h1>
+
+        <input #listNameInput class="input has-background-light is-medium" type="text" placeholder="Enter player name...">
+        <br>
+        <input #listTouchdownsInput class="input has-background-light is-medium" type="number" placeholder="Enter touchdowns...">
+        <br>
+        <input #listRunningYardsInput class="input has-background-light is-medium" type="number" placeholder="Enter running yards...">
+        
+        <br><br>
+        <div class="buttons is-right">
+            <button class="button is-medium" routerLink="/">Return</button>
+            <button class="button is-primary has-text-white is-medium" (onclick)="createList(listNameInput.value, listTouchdownsInput.value, listRunningYardsInput.value)">Add</button>
+        </div>
+
+    </div>
+</div>

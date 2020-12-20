@@ -1,0 +1,59 @@
+<div class="centered-content">
+    <div class="task-manager-container">
+        <div class="sidebar has-background-white">
+            <h1 class="title has-text-primary">
+                Players
+            </h1>
+
+            <div class="list-menu">
+                <a class="list-menu-item is-active">
+                    <p>Player #1</p>
+                </a>
+
+                <!-- This isn't working right now -->
+                <a class="list-menu-item" *ngFor="let list of lists" [routerLink]="['/lists', list._id]" routerLinkActive="is-active">
+                    <p>{{ list.title }}</p>
+                </a>        
+
+            </div>
+
+            <button class="button is-primary has-text-white" routerLink="/new-list">+ New Player</button>
+
+        </div>
+
+        <div class="task-list-container has-background-light">
+            <h1 class="title has-text-primary">
+                Stats
+            </h1>
+
+            <!-- Stats -->
+            <div class="task">
+                <p>Adrian Peterson</p>
+            </div> 
+            <div class="task">
+                <p>12</p>
+            </div> 
+            <div class="task">
+                <p>150</p>
+            </div> 
+            <div class="task" *ngFor="let list of lists">
+                <h5>Name: {{ list.name }} </h5> <br>
+                <!-- <h6>Touchdowns: {{ list.touchdowns }} </h6> <br>
+                <p>Rushing Yards: {{ list.rushingYards }} </p> -->
+            </div>
+            <div class="task" *ngFor="let list of lists">
+                <!--<h5>Name: {{ list.name }} </h5> <br> -->
+                 <h6>Touchdowns: {{ list.touchdowns }} </h6> <br>
+                <!-- <p>Rushing Yards: {{ list.rushingYards }} </p> -->
+            </div>
+            <div class="task" *ngFor="let list of lists">
+                <!-- <h5>Name: {{ list.name }} </h5> <br>
+                <h6>Touchdowns: {{ list.touchdowns }} </h6> <br> -->
+                <p>Rushing Yards: {{ list.rushingYards }} </p> 
+            </div>
+
+            
+        </div>
+
+    </div>
+</div>
